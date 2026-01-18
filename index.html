@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTROPY UNIT | Cyber Security Services | B.C.U. | Digital Protection</title>
+    <meta name="description" content="ENTROPY UNIT & BLACK CODE UNION - Professional cyber security services, digital forensics, website development, automation tools, and threat intelligence. Protect your digital presence with our expert team.">
+    <meta name="keywords" content="cyber security, digital protection, website development, automation tools, cyberxcode, entropy unit, black code union, hacking protection, data recovery, Instagram security">
+    <meta name="author" content="ENTROPY UNIT | CyberXcode">
+    <meta property="og:title" content="ENTROPY UNIT | Professional Cyber Security Services">
+    <meta property="og:description" content="Order within disorder. Digital security, website development, automation tools, and threat intelligence services.">
+    <meta property="og:image" content="https://cyberxcode2.wordpress.com/wp-content/uploads/2025/10/cropped-addtext_04-13-08.51.01.png">
+    <meta property="og:url" content="https://cyberxcode2.wordpress.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a0a0a;
+            --secondary: #111111;
+            --accent: #ff2a6d;
+            --accent-dark: #cc0044;
+            --accent-light: #ff5a8c;
+            --cyber-blue: #05d9e8;
+            --cyber-purple: #9457eb;
+            --text: #e0e0e0;
+            --text-light: #a0a0a0;
+            --card-bg: rgba(20, 20, 30, 0.85);
+            --warning: #ffcc00;
+            --success: #00ff88;
+            --danger: #ff2a6d;
+            --glow: 0 0 15px rgba(255, 42, 109, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            font-family: 'Exo 2', sans-serif;
+            line-height: 1.7;
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.98)),
+                url('https://cyberxcode2.wordpress.com/wp-content/uploads/2025/10/cropped-addtext_04-13-08.51.01.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, .logo-text {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Cyber Glitch Effect */
+        .glitch {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--cyber-blue);
+            animation: glitch-1 2s infinite linear alternate-reverse;
+        }
+        
+        .glitch::after {
+            left: -2px;
+            text-shadow: 2px 0 var(--accent);
+            animation: glitch-2 3s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch-1 {
+            0% { clip: rect(20px, 9999px, 15px, 0); }
+            5% { clip: rect(10px, 9999px, 30px, 0); }
+            10% { clip: rect(25px, 9999px, 40px, 0); }
+            15% { clip: rect(35px, 9999px, 25px, 0); }
+            20% { clip: rect(45px, 9999px, 50px, 0); }
+            100% { clip: rect(0, 9999px, 0, 0); }
+        }
+        
+        @keyframes glitch-2 {
+            0% { clip: rect(30px, 9999px, 90px, 0); }
+            5% { clip: rect(60px, 9999px, 70px, 0); }
+            10% { clip: rect(40px, 9999px, 80px, 0); }
+            15% { clip: rect(70px, 9999px, 50px, 0); }
+            20% { clip: rect(90px, 9999px, 60px, 0); }
+            100% { clip: rect(0, 9999px, 0, 0); }
+        }
+        
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 42, 109, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            filter: drop-shadow(0 0 10px rgba(255, 42, 109, 0.3));
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(90deg, var(--accent), var(--cyber-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 5px;
+        }
+        
+        .logo-text .tagline {
+            font-size: 0.85rem;
+            color: var(--cyber-blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--cyber-blue));
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: var(--glow);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 42, 109, 0.4);
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 42, 109, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+            z-index: -1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--accent), var(--cyber-blue), var(--cyber-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .hero-button {
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: white;
+            box-shadow: var(--glow);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--cyber-blue);
+            border: 2px solid var(--cyber-blue);
+        }
+        
+        .hero-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(255, 42, 109, 0.3);
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 40px 0;
+            border-top: 1px solid rgba(255, 42, 109, 0.2);
+            border-bottom: 1px solid rgba(255, 42, 109, 0.2);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+            background-color: rgba(20, 20, 30, 0.5);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 42, 109, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .stat-text {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--cyber-blue);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--cyber-blue));
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--cyber-blue));
+            z-index: 2;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 42, 109, 0.2);
+            border-color: rgba(255, 42, 109, 0.3);
+        }
+        
+        .service-header {
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            width: 70px;
+            height: 70px;
+            background-color: rgba(255, 42, 109, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--text);
+        }
+        
+        .service-body {
+            padding: 25px;
+        }
+        
+        .service-description {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .service-features {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--cyber-blue);
+            font-weight: bold;
+        }
+        
+        .service-price {
+            font-size: 2rem;
+            color: var(--success);
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* Automation Tools Section */
+        .automation {
+            padding: 80px 0;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .tool-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(5, 217, 232, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .tool-card:hover {
+            border-color: var(--cyber-blue);
+            box-shadow: 0 10px 25px rgba(5, 217, 232, 0.2);
+            transform: translateY(-10px);
+        }
+        
+        .tool-icon {
+            font-size: 3rem;
+            color: var(--cyber-blue);
+            margin-bottom: 20px;
+        }
+        
+        .tool-title {
+            font-size: 1.5rem;
+            color: var(--text);
+            margin-bottom: 15px;
+        }
+        
+        .tool-description {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .contact-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .contact-card h3 {
+            color: var(--accent);
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .contact-link:hover {
+            background-color: rgba(255, 42, 109, 0.1);
+            border-color: rgba(255, 42, 109, 0.3);
+            transform: translateX(10px);
+        }
+        
+        .contact-link.main {
+            background-color: rgba(255, 42, 109, 0.15);
+            border-color: var(--accent);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 42, 109, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-text strong {
+            display: block;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+        
+        .contact-text span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Manifesto Section */
+        .manifesto {
+            padding: 80px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .manifesto-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(20, 20, 30, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .manifesto-title {
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        .manifesto-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255, 42, 109, 0.3);
+        }
+        
+        .manifesto-item h4 {
+            color: var(--cyber-blue);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.95);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 42, 109, 0.2);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--cyber-blue);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style-type: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .footer-tagline {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .seo-content {
+            padding: 40px 0;
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .seo-content h2 {
+            color: var(--cyber-blue);
+            margin-bottom: 20px;
+        }
+        
+        .seo-content p {
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.95);
+                padding: 20px;
+                border-top: 1px solid rgba(255, 42, 109, 0.3);
+                z-index: 1000;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid, .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid, .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://cyberxcode2.wordpress.com/wp-content/uploads/2025/10/cropped-addtext_04-13-08.51.01.png" alt="ENTROPY UNIT Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>ENTROPY UNIT</h1>
+                    <div class="tagline">BLACK CODE UNION | CYBERXCODE</div>
+                </div>
+            </div>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#automation" class="nav-link">Automation</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#manifesto" class="nav-link">Manifesto</a>
+                <a href="https://instagram.com/entropy_unit" target="_blank" class="cta-button">
+                    <i class="fab fa-instagram"></i> Report Case
+                </a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title glitch" data-text="ENTROPY UNIT">
+                ENTROPY UNIT
+            </h1>
+            <p class="hero-subtitle">
+                Order within disorder • Never forget • Stay aware • Stay safe
+            </p>
+            <p class="hero-subtitle">
+                Professional cyber security services, digital forensics, website development, and automation solutions. 
+                Protecting the digital ecosystem since 2020.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="https://instagram.com/entropy_unit" target="_blank" class="hero-button btn-primary">
+                    <i class="fab fa-instagram"></i> Report to @entropy_unit
+                </a>
+                <a href="#services" class="hero-button btn-secondary">
+                    <i class="fas fa-shield-alt"></i> View Services
+                </a>
+                <a href="https://chat.whatsapp.com/LKR4eG9jLIVD6Jof1aOjjD" target="_blank" class="hero-button btn-secondary">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp Group
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Cases Resolved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Monitoring & Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Automation Tools</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">
+                Comprehensive digital security and development solutions with transparent pricing in INR.
+            </p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title">Lost Phone Recovery</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Advanced tracking and recovery of lost/stolen mobile devices using digital forensics techniques.
+                        </p>
+                        <ul class="service-features">
+                            <li>Device location tracking</li>
+                            <li>Data security assessment</li>
+                            <li>Recovery guidance</li>
+                            <li>Post-recovery security setup</li>
+                        </ul>
+                        <div class="service-price">₹1,500 - ₹15,000</div>
+                        <p class="price-note">30% of device value • Min: ₹1,500 • Max: ₹15,000</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3 class="service-title">Data Leak Removal</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Remove your sensitive information from social media, data dumps, and public databases.
+                        </p>
+                        <ul class="service-features">
+                            <li>Social media data removal</li>
+                            <li>Data broker opt-out</li>
+                            <li>Dark web monitoring</li>
+                            <li>Privacy audit report</li>
+                        </ul>
+                        <div class="service-price">₹2,000 - ₹8,000</div>
+                        <p class="price-note">Based on platform count and complexity</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="service-title">Website Development</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Professional website design and development with security-first approach.
+                        </p>
+                        <ul class="service-features">
+                            <li>Custom responsive design</li>
+                            <li>Security implementation</li>
+                            <li>SEO optimization</li>
+                            <li>Maintenance included (3 months)</li>
+                        </ul>
+                        <div class="service-price">₹5,000 - ₹50,000</div>
+                        <p class="price-note">Based on complexity and features required</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="service-title">Automation Solutions</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Custom automation tools for social media, data processing, and workflow optimization.
+                        </p>
+                        <ul class="service-features">
+                            <li>Social media automation</li>
+                            <li>Data scraping tools</li>
+                            <li>Workflow automation</li>
+                            <li>Custom bot development</li>
+                        </ul>
+                        <div class="service-price">₹3,000 - ₹25,000</div>
+                        <p class="price-note">One-time development + setup fee</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-user-times"></i>
+                        </div>
+                        <h3 class="service-title">Fake Account Takedown</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Identify and remove fake accounts impersonating you or your brand across platforms.
+                        </p>
+                        <ul class="service-features">
+                            <li>Multi-platform investigation</li>
+                            <li>Evidence collection</li>
+                            <li>Legal takedown notices</li>
+                            <li>Prevention strategies</li>
+                        </ul>
+                        <div class="service-price">₹1,500 - ₹5,000</div>
+                        <p class="price-note">Per account • Bulk discounts available</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-skull-crossbones"></i>
+                        </div>
+                        <h3 class="service-title">Scammer Investigation</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Professional investigation of online scammers with evidence collection and reporting.
+                        </p>
+                        <ul class="service-features">
+                            <li>Digital footprint analysis</li>
+                            <li>Evidence documentation</li>
+                            <li>Authority reporting</li>
+                            <li>Victim support guidance</li>
+                        </ul>
+                        <div class="service-price">₹3,000 - ₹20,000</div>
+                        <p class="price-note">Based on case complexity and hours required</p>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="service-title">Cyber Security Training</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Personalized cyber security awareness training for individuals and businesses.
+                        </p>
+                        <ul class="service-features">
+                            <li>Phishing awareness</li>
+                            <li>Password security</li>
+                            <li>Social engineering defense</li>
+                            <li>Practical demonstrations</li>
+                        </ul>
+                        <div class="service-price">₹500/hour</div>
+                        <p class="price-note">Group discounts available • Minimum 2 hours</p>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="service-title">Tips & Tricks Package</h3>
+                    </div>
+                    <div class="service-body">
+                        <p class="service-description">
+                            Exclusive digital security tips, tricks, and life hacks for enhanced online protection.
+                        </p>
+                        <ul class="service-features">
+                            <li>30+ security tips</li>
+                            <li>Tool recommendations</li>
+                            <li>Privacy configurations</li>
+                            <li>Monthly updates</li>
+                        </ul>
+                        <div class="service-price">₹999/month</div>
+                        <p class="price-note">Annual plan: ₹9,999 (2 months free)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Automation Tools Section -->
+    <section class="automation" id="automation">
+        <div class="container">
+            <h2 class="section-title">Automation Tools</h2>
+            <p class="section-subtitle">
+                Custom automation solutions to streamline your digital workflow and enhance productivity.
+            </p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="tool-title">Social Media Manager</h3>
+                    <p class="tool-description">
+                        Automated posting, engagement tracking, and analytics for Instagram, Twitter, and Facebook.
+                    </p>
+                    <div class="service-price">₹7,500</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="tool-title">Data Analyzer</h3>
+                    <p class="tool-description">
+                        Automated data collection, processing, and visualization for market research and analytics.
+                    </p>
+                    <div class="service-price">₹10,000</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="tool-title">Security Monitor</h3>
+                    <p class="tool-description">
+                        24/7 automated security monitoring with instant alerts for suspicious activities.
+                    </p>
+                    <div class="service-price">₹5,000/month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Reporting</h2>
+            <p class="section-subtitle">
+                Reach out to our team for services, reporting, or collaboration.
+            </p>
+            
+            <div class="contact-grid">
+                <!-- Official Accounts -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-check-circle"></i> Official Accounts</h3>
+                    <div class="contact-links">
+                        <a href="https://instagram.com/entropy_unit" target="_blank" class="contact-link main">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>@entropy_unit</strong>
+                                <span>Main Official Account • Report cases here</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://instagram.com/ajaysoren212" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>@ajaysoren212</strong>
+                                <span>Team Member • Technical Support</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://instagram.com/the_anonymous_h1" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>@the_anonymous_h1</strong>
+                                <span>Team Member • Investigations</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://instagram.com/cyberix.code" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>@cyberix.code</strong>
+                                <span>CyberXcode Account • General Inquiries</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Communication Channels -->
+                <div class="contact-card">
+                    <h3><i class="fas fa-comments"></i> Community Channels</h3>
+                    <div class="contact-links">
+                        <a href="https://chat.whatsapp.com/LKR4eG9jLIVD6Jof1aOjjD" target="_blank" class="contact-link main">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Main WhatsApp Group</strong>
+                                <span>Join for updates and community support</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://whatsapp.com/channel/0029Vb6zCGU6WaKeLTbaIE03" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>WhatsApp Channel</strong>
+                                <span>Public updates and alerts</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://cyberxcode2.wordpress.com" target="_blank" class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>CyberXcode Website</strong>
+                                <span>cyberxcode2.wordpress.com</span>
+                            </div>
+                        </a>
+                        
+                        <div class="contact-link">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <strong>Email Contact</strong>
+                                <span>DM on Instagram for email address</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+        <div class="container">
+            <h2>ENTROPY UNIT | Cyber Security Services & Digital Protection</h2>
+            <p>
+                <strong>ENTROPY UNIT</strong> and <strong>BLACK CODE UNION</strong> are professional cyber security organizations 
+                providing comprehensive digital protection services. Based in India with global reach, we specialize in 
+                cyber security solutions, digital forensics, website development, automation tools, and online threat mitigation.
+            </p>
+            <p>
+                Our services include <strong>lost phone recovery</strong> (starting from ₹1,500), <strong>data leak removal</strong> 
+                from social media platforms, <strong>fake account takedown</strong> services, <strong>scammer investigation</strong>, 
+                and <strong>professional website development</strong> with security implementation. We also offer custom 
+                <strong>automation solutions</strong> for businesses and individuals looking to streamline their digital operations.
+            </p>
+            <p>
+                The ENTROPY UNIT team operates on core principles of vigilance, awareness, and digital safety. 
+                We collaborate with <strong>CyberXcode</strong> and other cybersecurity communities to provide 
+                threat intelligence and digital protection services. Our <strong>WhatsApp group</strong> serves as 
+                a community platform for cyber awareness and support.
+            </p>
+            <p>
+                For reporting cyber crimes, online threats, or fake accounts, contact our official Instagram account 
+                <strong>@entropy_unit</strong>. We also maintain active presence on Instagram through 
+                <strong>@ajaysoren212</strong> and <strong>@the_anonymous_h1</strong> for technical support and investigations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section class="manifesto" id="manifesto">
+        <div class="container">
+            <div class="manifesto-content">
+                <h3 class="manifesto-title">🖤 ENTROPY UNIT — OFFICIAL MANIFESTO 🖤</h3>
+                
+                <div class="manifesto-item">
+                    <h4>1️⃣ WHY ENTROPY UNIT EXISTS</h4>
+                    <p>Chaos is inevitable. Ignorance is dangerous. In a world where digital threats evolve every second, most people are unprepared. ENTROPY UNIT exists to turn disorder into intelligence, to alert, educate, and protect.</p>
+                </div>
+                
+                <div class="manifesto-item">
+                    <h4>2️⃣ WHAT ENTROPY UNIT IS</h4>
+                    <p>ENTROPY UNIT is: A cyber-awareness community • A threat intelligence channel • A discipline-driven collective • A hub for digital safety, alerts, and knowledge sharing. We do not glorify chaos, we understand it and control it.</p>
+                </div>
+                
+                <div class="manifesto-item">
+                    <h4>3️⃣ WHO WE ARE</h4>
+                    <p>A team of aware, disciplined individuals committed to protecting members and the digital ecosystem. Roles include: Founder / CyberXcode – Leads strategy • Analyst / Observer – Monitors threats • Operator / B.C.U. – Maintains operations • Security Specialists – Handle technical cases.</p>
+                </div>
+                
+                <div class="manifesto-item">
+                    <h4>7️⃣ CORE PRINCIPLES</h4>
+                    <p>Never Forget – Learn from mistakes, past threats, and breaches • Stay Aware – Vigilance is your first defense • Stay Safe – Knowledge is protection • Control Chaos – Don't fear it, understand and manage it.</p>
+                </div>
+                
+                <div class="manifesto-item">
+                    <h4>9️⃣ TAGLINE / IDENTITY</h4>
+                    <p><strong>ENTROPY UNIT | OFFICIAL • Order within disorder • Never forget • Stay aware • Stay safe</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ENTROPY UNIT</h3>
+                    <div class="footer-tagline">Order within disorder</div>
+                    <p style="color: var(--text-light); margin-top: 15px;">
+                        Professional cyber security services and digital protection solutions.
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#automation">Automation Tools</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#manifesto">Manifesto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Phone Recovery</a></li>
+                        <li><a href="#services">Data Leak Removal</a></li>
+                        <li><a href="#services">Website Development</a></li>
+                        <li><a href="#services">Fake Account Takedown</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://instagram.com/entropy_unit" target="_blank">@entropy_unit (Official)</a></li>
+                        <li><a href="https://instagram.com/ajaysoren212" target="_blank">@ajaysoren212</a></li>
+                        <li><a href="https://instagram.com/the_anonymous_h1" target="_blank">@the_anonymous_h1</a></li>
+                        <li><a href="https://chat.whatsapp.com/LKR4eG9jLIVD6Jof1aOjjD" target="_blank">WhatsApp Group</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023-2025 ENTROPY UNIT | BLACK CODE UNION | CYBERXCODE. All rights reserved.</p>
+                <p>This is a professional cyber security and digital protection service. We operate within legal boundaries and promote ethical hacking principles.</p>
+                <p style="margin-top: 20px; color: var(--accent);">For emergencies: DM @entropy_unit on Instagram</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!navLinks.contains(event.target) && !mobileBtn.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without page reload
+                    history.pushState(null, null, targetId);
+                }
+            });
+        });
+        
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add scroll animations
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.service-card, .tool-card, .stat-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Initialize elements for animation
+        document.querySelectorAll('.service-card, .tool-card, .stat-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.5s, transform 0.5s';
+        });
+        
+        // Trigger initial animation
+        setTimeout(() => {
+            window.dispatchEvent(new Event('scroll'));
+        }, 100);
+        
+        // Instagram direct report button enhancement
+        const reportButton = document.querySelector('a[href*="entropy_unit"]');
+        if (reportButton && reportButton.textContent.includes('Report')) {
+            reportButton.addEventListener('click', function(e) {
+                // Open in new tab
+                this.setAttribute('target', '_blank');
+                // You could add analytics here
+                console.log('Report button clicked - Redirecting to Instagram');
+            });
+        }
+        
+        // WhatsApp group join tracking
+        const whatsappButtons = document.querySelectorAll('a[href*="whatsapp"]');
+        whatsappButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('WhatsApp group join initiated');
+                // Could add analytics tracking here
+            });
+        });
+    </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ENTROPY UNIT",
+        "alternateName": ["BLACK CODE UNION", "CyberXcode"],
+        "url": "https://cyberxcode2.wordpress.com",
+        "logo": "https://cyberxcode2.wordpress.com/wp-content/uploads/2025/10/cropped-addtext_04-13-08.51.01.png",
+        "description": "Professional cyber security services, digital forensics, website development, and automation solutions.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+        },
+        "sameAs": [
+            "https://instagram.com/entropy_unit",
+            "https://instagram.com/ajaysoren212",
+            "https://instagram.com/the_anonymous_h1",
+            "https://cyberxcode2.wordpress.com"
+        ]
+    }
+    </script>
+</body>
+</html>
